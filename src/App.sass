@@ -1,0 +1,65 @@
+$dark: #406a7b
+$light: #00b6ff
+$white: white
+$black: black
+$border-radius: 4px
+
+a
+  color: $light
+  text-decoration: none
+button
+  background-color: $dark
+  border-radius: $border-radius
+  color: $white
+  padding: 12px 32px
+  font-size: 1.6em
+  &:hover
+    background-color: lighten($dark, 4%)
+
+.wrap
+  padding: 0 24px
+  max-width: 1280px
+  margin: 0 auto
+  color: $dark
+
+header
+  overflow: auto
+  h1
+    float: left
+  nav
+    float: right
+    font-size: 1.6em
+    margin-top: 27px
+
+
+main
+  textarea
+    $padding: 24px
+    width: calc(100% - #{2 * $padding})
+    background: #3a3a3a
+    color: $white
+    font-family: monospace
+    padding: $padding
+    font-size: 1.4em
+    border-radius: $border-radius
+    margin-bottom: 24px
+    line-height: 1.6em
+    outline: none
+    resize: vertical
+    border: 0 $black
+    &:focus
+      box-shadow: 0 0 3px 2px $light
+  label
+    margin-right: 24px
+    padding-left: 4px
+  button
+    float: right
+  .wrap-input
+    overflow: auto
+  .wrap-radio
+    margin-top: 20px
+    float: left
+  .wrap-select
+    float: left
+    margin-top: 20px
+    margin-left: 80px

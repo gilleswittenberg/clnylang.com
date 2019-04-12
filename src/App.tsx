@@ -1,28 +1,60 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+//import useClny from './hooks/useClny'
+import './App.sass'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+const App = () => {
+
+  const defaultText = "# comment\n\nprint \"Hello World\"\n\n1 + 2\n\n"
+  const [text, setText] = useState(defaultText)
+
+  const modes = ["code", "data", "parse"]
+  const [mode, setMode] = useState(modes[0])
+
+  const [showOutput, setShowOutput] = useState(true)
+
+  const [output] = useClny(defaultText)
+  const result = ""
+
+  const showResult = result !== ""
+
+
+  return (
+    <>
+      <header>
+        <h1>clny</h1>
+        <nav>
+          <a href="/about">about</a>
+        </nav>
+      </header>
+      <main>
+        <textarea cols={ 128 } rows={ 16 } value={ text } onChange={ event => setText(event.target.value) } />
+        <div className="wrap-input">
+          <div className="wrap-radio">
+            { modes.map(m =>
+                <span key={ m }>
+                  <input type="radio" id={ m } name="mode" value={ m } onChange={ event => setMode(event.target.value) } checked={ m === mode }/>
+                  <label htmlFor={ m }>{ m }</label>
+                </span>
+              )
+            }
+          </div>
+          <div className="wrap-select">
+            <input type="checkbox" id="show-output" checked={ showOutput } onChange={ event => setShowOutput(event.target.checked) } />
+            <label htmlFor="show-output">show output</label>
+          </div>
+          <button>run</button>
+        </div>
+        <div>
+          { showResult &&
+            <>
+              <h3>result:</h3>
+              <code>{ result }</code>
+            </>
+          }
+        </div>
+      </main>
+    </>
+  )
 }
 
-export default App;
+export default App
