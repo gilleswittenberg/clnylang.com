@@ -17,7 +17,6 @@ const createRun = (setResult: any, setOutput: any) =>
   async (content: string, mode: string) => {
     try {
       const [result, output] = await clny(content, mode, false)
-      console.log(result, output)
       const str = isObject(result) ? "@TODO" : result
       setResult(str)
       setOutput(output)

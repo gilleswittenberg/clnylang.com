@@ -43,7 +43,7 @@ const App = () => {
             <input type="checkbox" id="show-output" checked={ showOutput } onChange={ event => setShowOutput(event.target.checked) } />
             <label htmlFor="show-output">show output</label>
           </div>
-          <button onClick={ event => run() }>run</button>
+          <button onClick={ event => run() }>play</button>
         </div>
         <div>
           { showResultAndOutput &&
