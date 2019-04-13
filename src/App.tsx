@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-//import useClny from './hooks/useClny'
+import React, { useState, useEffect } from 'react'
+import useClny from './hooks/useClny'
 import './App.sass'
 
 const App = () => {
@@ -7,16 +7,16 @@ const App = () => {
   const defaultText = "# comment\n\nprint \"Hello World\"\n\n1 + 2\n\n"
   const [text, setText] = useState(defaultText)
 
-  const modes = ["code", "data", "parse"]
+  const modes = ["code", "json", "parse"]
   const [mode, setMode] = useState(modes[0])
 
   const [showOutput, setShowOutput] = useState(true)
 
-  const [output] = useClny(defaultText)
-  const result = ""
+  const [runClny, result] = useClny()
+  const run = () => runClny(text, mode)
+  useEffect(() => { run() }, [])
 
   const showResult = result !== ""
-
 
   return (
     <>
@@ -42,7 +42,7 @@ const App = () => {
             <input type="checkbox" id="show-output" checked={ showOutput } onChange={ event => setShowOutput(event.target.checked) } />
             <label htmlFor="show-output">show output</label>
           </div>
-          <button>run</button>
+          <button onClick={ event => run() }>run</button>
         </div>
         <div>
           { showResult &&

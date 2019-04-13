@@ -35,18 +35,21 @@ header
 main
   textarea
     $padding: 24px
+
     width: calc(100% - #{2 * $padding})
     background: #3a3a3a
-    color: $white
-    font-family: monospace
     padding: $padding
-    font-size: 1.4em
     border-radius: $border-radius
     margin-bottom: 24px
-    line-height: 1.6em
     outline: none
     resize: vertical
     border: 0 $black
+
+    color: $white
+    font-family:  source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+    font-size: 1em
+    line-height: 1.6em
+
     &:focus
       box-shadow: 0 0 3px 2px $light
   label
