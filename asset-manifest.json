@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.432ab2fd.chunk.css",
-  "main.js": "/static/js/main.df8f8ff2.chunk.js",
-  "main.js.map": "/static/js/main.df8f8ff2.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.1906896e.chunk.js": "/static/js/2.1906896e.chunk.js",
-  "static/js/2.1906896e.chunk.js.map": "/static/js/2.1906896e.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.47299faddd5258119862e3b3401d8eeb.js": "/precache-manifest.47299faddd5258119862e3b3401d8eeb.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.432ab2fd.chunk.css.map": "/static/css/main.432ab2fd.chunk.css.map"
+  "main.css": "/clnylang.com/static/css/main.432ab2fd.chunk.css",
+  "main.js": "/clnylang.com/static/js/main.1b50289e.chunk.js",
+  "main.js.map": "/clnylang.com/static/js/main.1b50289e.chunk.js.map",
+  "runtime~main.js": "/clnylang.com/static/js/runtime~main.ace66501.js",
+  "runtime~main.js.map": "/clnylang.com/static/js/runtime~main.ace66501.js.map",
+  "static/js/2.1906896e.chunk.js": "/clnylang.com/static/js/2.1906896e.chunk.js",
+  "static/js/2.1906896e.chunk.js.map": "/clnylang.com/static/js/2.1906896e.chunk.js.map",
+  "index.html": "/clnylang.com/index.html",
+  "precache-manifest.d06d9fa59ac02c0d52b63635e6e4fc37.js": "/clnylang.com/precache-manifest.d06d9fa59ac02c0d52b63635e6e4fc37.js",
+  "service-worker.js": "/clnylang.com/service-worker.js",
+  "static/css/main.432ab2fd.chunk.css.map": "/clnylang.com/static/css/main.432ab2fd.chunk.css.map"
 }
