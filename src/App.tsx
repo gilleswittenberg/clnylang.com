@@ -12,18 +12,19 @@ const App = () => {
 
   const [showOutput, setShowOutput] = useState(true)
 
-  const [runClny, result] = useClny()
+  const [runClny, result, output] = useClny()
   const run = () => runClny(text, mode)
   useEffect(() => { run() }, [])
 
   const showResult = result !== ""
+  const showResultAndOutput = showResult || showOutput
 
   return (
     <>
       <header>
         <h1>clny</h1>
         <nav>
-          <a href="/about">about</a>
+          { /*<a href="/about">about</a>*/ }
         </nav>
       </header>
       <main>
@@ -45,10 +46,15 @@ const App = () => {
           <button onClick={ event => run() }>run</button>
         </div>
         <div>
-          { showResult &&
+          { showResultAndOutput &&
             <>
               <h3>result:</h3>
-              <code>{ result }</code>
+              { showOutput &&
+                output.map(line => <p className="output" key={ line }>{ line }</p>)
+              }
+              { showResult &&
+                <code>{ result }</code>
+              }
             </>
           }
         </div>
