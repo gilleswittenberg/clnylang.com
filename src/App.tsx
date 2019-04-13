@@ -4,7 +4,7 @@ import './App.sass'
 
 const App = () => {
 
-  const defaultText = "# comment\n\nprint \"Hello World\"\n\n1 + 2\n\n"
+  const defaultText = "# comment\n\nprint \"Hello World\"\n\n1 + 2 * 3\n\n"
   const [text, setText] = useState(defaultText)
 
   const modes = ["code", "json", "parse"]
@@ -45,7 +45,7 @@ const App = () => {
           </div>
           <button onClick={ event => run() }>play</button>
         </div>
-        <div>
+        <div className="result">
           { showResultAndOutput &&
             <>
               <h3>result:</h3>
