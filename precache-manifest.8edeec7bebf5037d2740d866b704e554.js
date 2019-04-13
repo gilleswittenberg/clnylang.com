@@ -12,11 +12,11 @@ self.__precacheManifest = [
     "url": "/clnylang.com/static/js/runtime~main.ace66501.js"
   },
   {
-    "revision": "36a68524617227943a34",
-    "url": "/clnylang.com/static/js/2.1906896e.chunk.js"
+    "revision": "16c34ad9304d73037f5a",
+    "url": "/clnylang.com/static/js/2.32986754.chunk.js"
   },
   {
-    "revision": "1b36e9aefdf96ff5f542c8d34909cb1d",
+    "revision": "8bfa8318844a22744f8d287422158178",
     "url": "/clnylang.com/index.html"
   }
 ];
