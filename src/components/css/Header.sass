@@ -1,13 +1,23 @@
+@import "settings"
+@import "media-queries"
+
 header
   overflow: auto
   h1
     float: left
+    margin-left: $margin-small
   nav
     float: right
-    font-size: 1.6em
-    margin-top: 27px
+    margin-right: $margin-small
+    font-size: 1.2em
+    margin-top: 33px
+    @include desktop
+      font-size: 1.6em
+      margin-top: 27px
     ul
       margin: 0
     li
       display: inline-block
       margin-left: 24px
+    a
+      padding: 0 4px
