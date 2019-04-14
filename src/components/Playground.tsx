@@ -24,19 +24,23 @@ const Playground = () => {
       <textarea cols={ 128 } rows={ 16 } value={ text } onChange={ event => setText(event.target.value) } />
       <div className="wrap-content">
         <div className="wrap-input">
-          <button onClick={ event => run() }>play</button>
-          <div className="wrap-radio">
-            { modes.map(m =>
-                <div key={ m }>
-                  <input type="radio" id={ m } name="mode" value={ m } onChange={ event => setMode(event.target.value) } checked={ m === mode }/>
-                  <label htmlFor={ m }>{ m }</label>
-                </div>
-              )
-            }
+          <div className="wrap-radio-select">
+            <div className="wrap-radio">
+              { modes.map(m =>
+                  <div key={ m }>
+                    <input type="radio" id={ m } name="mode" value={ m } onChange={ event => setMode(event.target.value) } checked={ m === mode }/>
+                    <label htmlFor={ m }>{ m }</label>
+                  </div>
+                )
+              }
+            </div>
+            <div className="wrap-select">
+              <input type="checkbox" id="show-output" checked={ showOutput } onChange={ event => setShowOutput(event.target.checked) } />
+              <label htmlFor="show-output">show output</label>
+            </div>
           </div>
-          <div className="wrap-select">
-            <input type="checkbox" id="show-output" checked={ showOutput } onChange={ event => setShowOutput(event.target.checked) } />
-            <label htmlFor="show-output">show output</label>
+          <div>
+            <button onClick={ event => run() }>play</button>
           </div>
         </div>
         <div className="result">

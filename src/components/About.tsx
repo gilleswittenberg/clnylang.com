@@ -4,11 +4,13 @@ import './css/About.sass'
 const About = () => {
   return (
     <div className="about">
-      <p>Programming language implementation in JavaScript, using parser combinator library <a href="https://github.com/francisrstokes/arcsecond">Arcsecond</a></p>
-      <ul>
-        <li><a href="https://github.com/gilleswittenberg/clny-js">github.com/gilleswittenberg/clny-js</a></li>
-        <li><a href="https://github.com/gilleswittenberg/clnylang.com">github.com/gilleswittenberg/clnylang.com</a></li>
-      </ul>
+      <div className="wrap-content">
+        <p>Programming language implementation in JavaScript, using parser combinator library <a href="https://github.com/francisrstokes/arcsecond">Arcsecond</a></p>
+        <ul>
+          <li><a href="https://github.com/gilleswittenberg/clny-js">github.com/gilleswittenberg/clny-js</a></li>
+          <li><a href="https://github.com/gilleswittenberg/clnylang.com">github.com/gilleswittenberg/clnylang.com</a></li>
+        </ul>
+      </div>
     </div>
   )
 }

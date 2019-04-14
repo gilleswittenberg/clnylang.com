@@ -2,6 +2,10 @@
 @import "media-queries"
 
 .playground
+
+  .wrap-content
+    margin: 0 $margin-small
+
   textarea
     $padding: 24px
 
@@ -25,11 +29,26 @@
 
     &:focus
       box-shadow: 0 0 3px 2px $light
+
   label
-    margin-right: 24px
     padding-left: 4px
+    @include desktop
+      margin-right: 24px
+
+  .wrap-radio-select
+    @include desktop
+      display: flex
+  .wrap-input
+    display: flex
+    justify-content: space-between
+  .wrap-radio > div
+      margin-bottom: 8px
+      @include desktop
+        display: inline-block
+  .wrap-select
+    @include desktop
+      margin-left: 80px
   button
-    float: right
     border-radius: 100px
     padding: 11px 32px 14px
     &:before
@@ -37,24 +56,11 @@
       padding-right: 12px
       top: 1px
       position: relative
-  .wrap-content
-    margin: 0 $margin-small
-  .wrap-input
-    overflow: auto
-  .wrap-radio
-    @include desktop
-      float: left
-    > div
-      margin-bottom: 8px
-      @include desktop
-        display: inline-block
-  .wrap-select
-    @include desktop
-      margin-left: 80px
-      float: left
 
   div.result
-    margin-bottom: 128px
+    margin-bottom: 32px
+    @include desktop
+      margin-bottom: 128px
     p.output
       font-style: italic
       color: $lightgray
