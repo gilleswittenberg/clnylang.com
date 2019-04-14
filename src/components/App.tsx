@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Header from "./components/Header"
-import Playground from "./components/Playground"
-import About from "./components/About"
-import './App.sass'
+import Header from "./Header"
+import Playground from "./Playground"
+import About from "./About"
+import './css/App.sass'
 
 
 const App = () => {
