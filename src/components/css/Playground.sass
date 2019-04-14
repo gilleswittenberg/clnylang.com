@@ -1,0 +1,52 @@
+@import "settings"
+
+.playground
+  textarea
+    $padding: 24px
+
+    width: calc(100% - #{2 * $padding})
+    background: #3a3a3a
+    padding: $padding
+    border-radius: $border-radius
+    margin-bottom: 24px
+    outline: none
+    resize: vertical
+    border: 0 $black
+
+    color: $white
+    font-family:  source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+    font-size: 1em
+    line-height: 1.6em
+
+    &:focus
+      box-shadow: 0 0 3px 2px $light
+  label
+    margin-right: 24px
+    padding-left: 4px
+  button
+    float: right
+    border-radius: 100px
+    padding: 11px 32px 14px
+    &:before
+      content: "\25B6"
+      padding-right: 12px
+      top: 1px
+      position: relative
+  .wrap-input
+    overflow: auto
+  .wrap-radio
+    margin-top: 20px
+    float: left
+  .wrap-select
+    float: left
+    margin-top: 20px
+    margin-left: 80px
+
+  div.result
+    margin-bottom: 128px
+    p.output
+      font-style: italic
+      color: $lightgray
+      line-height: 1.4em
+    code
+      white-space: pre-wrap
