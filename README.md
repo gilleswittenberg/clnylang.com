@@ -1,3 +1,19 @@
+# clnylang.com
+
+[clnylang.com](http://clnylang.com)
+
+## TODO
+- Enter remembering idention
+- Tab in textarea for indentions (2 spaces)
+- Examples (run, json)
+- Load files
+- Tips
+- Favicon / logo
+- Blink play button on Play triggered by Ctrl + Enter
+
+
+# Original README
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
