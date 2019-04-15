@@ -1,8 +1,9 @@
 # clnylang.com
 
-[clnylang.com](http://clnylang.com)
+[clnylang.com](https://gilleswittenberg.github.io/clnylang.com/)
 
 ## TODO
+- Domain (clnylang.com)
 - Enter remembering idention
 - Tab in textarea for indentions (2 spaces)
 - Examples (run, json)
