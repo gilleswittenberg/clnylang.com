@@ -12,7 +12,7 @@ const Playground = () => {
 
   const [showOutput, setShowOutput] = useState(true)
 
-  const [runClny, result, output] = useClny()
+  const [runClny, result, output, errors] = useClny()
   const run = () => runClny(text, mode)
   useEffect(() => { run() }, [])
 
@@ -29,8 +29,9 @@ const Playground = () => {
     return () => window.removeEventListener("keypress", handler)
   }, [text, mode])
 
-  const showResult = result !== ""
-  const showResultAndOutput = showResult || showOutput
+  const showResultsResult = result !== ""
+  const showResultsOutput = showOutput && output.length > 0
+  const showResultsErrors = errors.length > 0
 
   return (
     <div className="playground">
@@ -57,15 +58,29 @@ const Playground = () => {
           </div>
         </div>
         <div className="result">
-          { showResultAndOutput &&
+          { showResultsErrors &&
+            <>
+              <h3>errors:</h3>
+              { errors.map(error => {
+                  const lineNumber = error.lineNumber || "UNKNOWN"
+                  const errorType = error.errorType || "Error"
+                  const message = error.toString().replace(/^Error/, errorType)
+                  const text = "line: " + lineNumber + ", " + message
+                  return (<p className="error" key={ message }>{ text }</p>)
+                }
+              )}
+            </>
+          }
+          { showResultsOutput &&
+            <>
+              <h3>output:</h3>
+              { output.map(line => <p className="output" key={ line }>{ line }</p>) }
+            </>
+          }
+          { showResultsResult &&
             <>
               <h3>result:</h3>
-              { showOutput &&
-                output.map(line => <p className="output" key={ line }>{ line }</p>)
-              }
-              { showResult &&
-                <code>{ result }</code>
-              }
+              <code>{ result }</code>
             </>
           }
         </div>
