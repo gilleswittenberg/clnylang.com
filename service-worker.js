@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/clnylang.com/precache-manifest.dda61cb788247d5e1c19f4d03b80ba1e.js"
+  "/clnylang.com/precache-manifest.e974353647450c9c0049e978611e6e3b.js"
 );
 
 workbox.clientsClaim();
