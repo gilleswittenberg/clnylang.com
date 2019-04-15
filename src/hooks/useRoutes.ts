@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 type Route = string
 type OptionalRoute = Route | undefined
 type Routes = Route[]
+type Base = string
 
 type RoutesObject = {
   route: () => OptionalRoute,
@@ -14,7 +15,9 @@ export type SwitchRoute = (arg0: Route) => void
 
 const pathname = document.location.pathname
 
-const useRoutes = (routes: Routes) : [RoutesObject, SwitchRoute] => {
+const path = (base: Base, route: Route) => base + route
+
+const useRoutes = (routes: Routes, base: Base = "") : [RoutesObject, SwitchRoute] => {
 
   const routesObject: RoutesObject = {
     route:  () => route,
@@ -23,10 +26,10 @@ const useRoutes = (routes: Routes) : [RoutesObject, SwitchRoute] => {
     isPage: (path: Route) => route === path
   }
 
-  const defaultRoute = routes.find(route => route === pathname)
+  const defaultRoute = routes.find(route => path(base, route) === pathname)
   const [route, setRoute] = useState<OptionalRoute>(defaultRoute)
   const switchRoute = (route: Route) => {
-    window.history.pushState(null, route, route)
+    window.history.pushState(null, route, path(base, route))
     setRoute(route)
   }
 

@@ -9,8 +9,10 @@ import './css/App.sass'
 const routes = ["/", "/about"]
 
 const App = () => {
-  
-  const [route, switchRoute] = useRoutes(routes)
+
+  const base = document.location.pathname.slice(0, 13) === "/clnylang.com" ? "/clnylang.com" : ""
+
+  const [route, switchRoute] = useRoutes(routes, base)
   const showPlayground = route.isHome()
   const showAbout = route.isPage("/about")
   const show404 = route.is404()
