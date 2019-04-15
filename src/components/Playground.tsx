@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import useClny from '../hooks/useClny'
 import './css/Playground.sass'
 
@@ -16,12 +16,25 @@ const Playground = () => {
   const run = () => runClny(text, mode)
   useEffect(() => { run() }, [])
 
+  const textareaElement = useRef(null)
+  useEffect(() => {
+    const handler = (event: KeyboardEvent) => {
+      if (document.activeElement !== textareaElement.current) return
+      const isEnter = (keyCode: number) => keyCode === 13
+      if (isEnter(event.which) && event.ctrlKey === true) {
+        run()
+      }
+    }
+    window.addEventListener("keypress", handler, false)
+    return () => window.removeEventListener("keypress", handler)
+  }, [text, mode])
+
   const showResult = result !== ""
   const showResultAndOutput = showResult || showOutput
 
   return (
     <div className="playground">
-      <textarea cols={ 128 } rows={ 16 } value={ text } onChange={ event => setText(event.target.value) } />
+      <textarea ref={ textareaElement } cols={ 128 } rows={ 16 } value={ text } onChange={ event => setText(event.target.value) } />
       <div className="wrap-content">
         <div className="wrap-input">
           <div className="wrap-radio-select">
