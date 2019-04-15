@@ -16,6 +16,7 @@
     "typescript": "3.4.3"
   },
   "scripts": {
+    "eslint": "./node_modules/.bin/eslint src/**/*.{ts,tsx}",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

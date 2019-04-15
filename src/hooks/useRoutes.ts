@@ -26,7 +26,7 @@ const useRoutes = (routes: Routes) : [RoutesObject, SwitchRoute] => {
   const defaultRoute = routes.find(route => route === pathname)
   const [route, setRoute] = useState<OptionalRoute>(defaultRoute)
   const switchRoute = (route: Route) => {
-    history.pushState(null, route, route)
+    window.history.pushState(null, route, route)
     setRoute(route)
   }
 
