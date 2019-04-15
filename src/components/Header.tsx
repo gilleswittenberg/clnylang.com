@@ -1,15 +1,20 @@
-import React, { Props } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import './css/Header.sass'
+import { SwitchRoute } from "../hooks/useRoutes"
 
-const Header = (props: any ) => {
-  const { setRoute } = props
+type Props = {
+  switchRoute: SwitchRoute
+}
+
+const Header = (props: Props ) => {
+  const { switchRoute } = props
   return (
     <header>
       <h1>clny</h1>
       <nav>
         <ul>
-          <li><a href="/" onClick={ event => { event.preventDefault(); setRoute("/") } }>playground</a></li>
-          <li><a href="/about" onClick={ event => { event.preventDefault(); setRoute("/about") } }>about</a></li>
+          <li><a href="/" onClick={ event => { event.preventDefault(); switchRoute("/") } }>playground</a></li>
+          <li><a href="/about" onClick={ event => { event.preventDefault(); switchRoute("/about") } }>about</a></li>
         </ul>
       </nav>
     </header>
