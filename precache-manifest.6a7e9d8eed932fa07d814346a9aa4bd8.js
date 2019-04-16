@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "fefa5cc9f0fd37f5fa40",
+    "revision": "372078d0ed0938a594e2",
     "url": "/clnylang.com/static/css/main.59caac44.chunk.css"
   },
   {
-    "revision": "fefa5cc9f0fd37f5fa40",
-    "url": "/clnylang.com/static/js/main.f2e63927.chunk.js"
+    "revision": "372078d0ed0938a594e2",
+    "url": "/clnylang.com/static/js/main.688eb189.chunk.js"
   },
   {
     "revision": "de5d3e6db144b6b0b0ea",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/clnylang.com/static/js/2.e829d17b.chunk.js"
   },
   {
-    "revision": "ef328ee9024ee6d2e654a71458c5d2ff",
+    "revision": "8d0bc0ea4048948f69015ad18a079fe5",
     "url": "/clnylang.com/index.html"
   }
 ];
