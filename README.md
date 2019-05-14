@@ -7,6 +7,16 @@
 - Enter remembering idention
 - Tab in textarea for indentions (2 spaces)
 - Examples (run, json)
+  - Hello World
+  - FizzBuzz
+  - Fibonacci
+  - Factorial
+  - Monads
+  - Numbers (suffix)
+  - Compound / Types
+  - Async
+  - State / Mutability
+  - Impurity
 - Load files
 - Tips
 - Favicon / logo
